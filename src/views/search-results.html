@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+<!-- Significa que vai herdar tudo que tem no documento
+layout.html -->
+{% set pageId = "page-search-results" %}
+{% block styles %}
+<link href="css/search-results.css" rel="stylesheet">
+{% endblock styles %}
+ 
+{% block title %}
+<title>Pontos de Coleta</title>
+{% endblock title %}
+
+{% block content %}
+{% include "partials/page-header.html" %}
+<section>
+    {% if total > 0 %}
+    
+        <h3>
+                    <strong>{{ total }} Pontos</strong> encontrados
+        </h3>
+
+        <div class="cards">
+
+                {% for place in places %}
+                <div class="card">
+                    <img src="{{ place.image }}" alt="{{ place.name }}">
+                    <h1>{{ place.name }}</h1>
+                    <h3>{{ place.items }}</h3> 
+                    <p>{{ place.city }}, {{ place.state }} <br/>
+                    {{ place.addres }} <br/>
+                    {{ place.addres2 }}</p>
+                </div> <!-- card -->
+                {% endfor %}
+        </div><!-- cards -->
+
+        {% else %}
+
+        <h3>
+            <strong>Nenhum</strong> 
+        local encontrado</h3>
+    {% endif %}
+</section>
+{% endblock content %}

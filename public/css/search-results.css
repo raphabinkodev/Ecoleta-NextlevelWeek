@@ -1,0 +1,78 @@
+
+body::after{
+    content: "";
+    position: absolute;
+    background: white;
+    top: 280px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+} 
+#page-search-results{
+    width: 95%;
+    max-width: 1440px;
+    /* Alinhamento de Caixa Externo*/
+    margin: 0 auto;
+}
+#page-search-results header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+#page-search-results header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#page-search-results header a span{
+    background-image: url(../icones/arrow-left.svg);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: 16px;
+}
+#page-search-results section{
+    margin-top: 58px;
+}
+#page-search-results section h3{
+    font-weight: normal;
+    margin-bottom: 48px;
+}
+#page-search-results section .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+#page-search-results section img{
+    width: 100%;
+    object-fit: cover;
+    max-width: 550px;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+}
+
+#page-search-results section .cards h1{
+    font-size: 36px;
+    line-height: 41px;
+    color: #322153;
+    margin-top: 32px;
+}
+#page-search-results section .cards h3{
+    font-weight: 500px;
+    font-size: 24px;
+    line-height: 34px;
+    color: #34cb79;
+    margin: 24px 0;
+}
+#page-search-results section .cards p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+}
+
+
+
+
